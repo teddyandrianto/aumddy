@@ -1,17 +1,9 @@
 
 <div class="container utama">
-	 
-	 
-    <img src="<?php echo base_url('assets')?>/img/about.png" width="100%"> 
+	<?php foreach ($about as $abt) {
+	 ?>
+    <img src="<?php echo base_url('assets/img/').$abt->gambar?>" width="100%"> 
     <h3 style="font-weight: bold;">Sejarah</h3>
-    <p align="justify" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat lectus diam, et ornare dui placerat in. Nunc suscipit posuere ipsum, eget varius leo eleifend a. Etiam bibendum sapien justo, vitae dignissim lacus tincidunt at. Cras pretium vestibulum leo sit amet laoreet. Donec lacinia odio vitae est ornare porttitor. Nunc vel iaculis justo, sed ultricies nibh. Curabitur congue congue nulla, in vehicula lectus. Suspendisse enim dolor, suscipit in massa sit amet, blandit consequat neque.</p>
-<p align="justify" >
-Sed scelerisque finibus facilisis. Suspendisse potenti. Quisque dapibus est id eleifend suscipit. Donec quis dui vehicula, interdum mi ac, pharetra arcu. Quisque ultrices a massa in blandit. Ut pharetra augue in tincidunt scelerisque. Donec in viverra lacus. Integer consequat velit eu rhoncus faucibus. Donec faucibus odio massa, sodales aliquam arcu venenatis eu. Integer sapien odio, scelerisque eu enim id, vulputate euismod ex. Etiam in interdum urna. Morbi tincidunt venenatis aliquam.</p>
-
-<p align="justify" >
-Ut ipsum turpis, finibus ut ipsum vitae, rutrum iaculis tortor. Suspendisse potenti. Nullam commodo semper felis, nec blandit tortor fringilla ut. Phasellus ultricies sem ut volutpat volutpat. Donec tincidunt, odio ut ornare facilisis, nisl nunc maximus eros, sed accumsan nulla lacus gravida risus. Mauris quis feugiat odio. Maecenas posuere orci ut ligula finibus mollis. Integer sed consectetur leo, sed finibus libero. Aenean blandit leo nibh, id faucibus turpis scelerisque quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p align="justify" >
-Curabitur et enim lectus. Vestibulum molestie diam eros. Nullam gravida ultrices elit a mollis. Donec posuere nisi eu tempor tempor. Mauris augue felis, pharetra dictum diam auctor, feugiat elementum lorem. Vestibulum fringilla urna vitae condimentum facilisis. Praesent id eleifend justo. Nulla tempor in nulla aliquet rutrum. Aliquam erat volutpat. Vestibulum rhoncus iaculis malesuada. Maecenas scelerisque sagittis risus, consequat efficitur libero sagittis nec. Sed dapibus iaculis cursus. Nulla erat massa, tempor vitae dignissim quis, placerat sed mi. Integer pellentesque neque elit, at eleifend nulla vehicula ac. Ut cursus odio ipsum, in ultricies sapien suscipit consectetur. Fusce gravida, magna ut mollis auctor, augue nulla tincidunt velit, ut sagittis odio ligula et ex.</p>
-<p align="justify" >  
-Duis maximus felis mi, placerat vestibulum mauris elementum non. Vestibulum augue nibh, pellentesque at arcu at, fringilla condimentum urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. In at accumsan sem. Mauris scelerisque sit amet dui in condimentum. Integer vestibulum iaculis enim molestie tincidunt. Mauris at augue elementum, elementum leo et, viverra erat. Sed quam odio, elementum quis magna a, dapibus ullamcorper lacus. Pellentesque commodo nibh nec dolor ultricies, eget maximus diam facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent quam nulla, lobortis in dapibus sed, maximus non nisl. Donec facilisis dictum imperdiet. Donec semper lacus orci, id hendrerit arcu interdum at. Nulla aliquam elit justo, nec tristique mi placerat quis. Vivamus aliquet mauris tempus tincidunt semper. Aliquam at sem non massa pharetra pretium.</p>
+    <?php echo $abt->deskripsi ?>
+    <?php } ?>
 </div>

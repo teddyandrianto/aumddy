@@ -5,21 +5,13 @@ background-color: #f0f0f0
   margin-top: 110px;
   margin-bottom: 100px; 
 }
-.thumbnail:hover .ditel{
+.thumbnail:hover{ 
     opacity: 1;
     transform: rotate(0);
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.05);
 }
+  
 
-.ditel{
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    filter: alpha(opacity=0);
-    opacity: 0;
-    padding-top: 44%;
-    padding-bottom: 43% ;
-    margin-top: -100%;
-       
-}
 .ukuran{
       height: 35px;
       width: 300px;
@@ -78,23 +70,7 @@ background-color: #f0f0f0
   background-color: #fff; 
   width: 250px;
 }
-@media (min-width: 1200px) and (max-width: 1500px)  {
-
-.thumbnail:hover .ditel{
-    opacity: 1;
-    transform: rotate(0);
-    background: rgba(0,0,0,.5);
-}
-    .ditel{
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    filter: alpha(opacity=0);
-    opacity: 0;
-    padding-top: 42%;
-    padding-bottom: 42% ;
-    margin-top: -100%;
-       
-    }
-}
+  
 li > a{
   text-decoration: none;
   color: #fff; 
@@ -126,22 +102,4 @@ li > a{
 }
 .footer-links a:hover{
   color: #084f4a;
-}
-
-@media (min-width: 771px) and (max-width: 1199px)  {
- 
-.thumbnail:hover .ditel{
-    opacity: 1;
-    transform: rotate(0);
-    background: rgba(0,0,0,.5);
-}
-    .ditel{
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    filter: alpha(opacity=0);
-    opacity: 0;
-    padding-top: 48%;
-    padding-bottom: 100% ;
-    margin-top: -100%;
-       
-    }
 }

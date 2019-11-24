@@ -1,134 +1,137 @@
 <div class="container utama">
 	<div class="row">
-
-  <div class="col-md-3" style="margin-right: 10px ;padding: 20px; background-color: #fff;">
-    <?php if($_SESSION['sesilogin']['foto']!=""){?>
+    <div class="col-md-3" style="margin-right: 10px ;padding: 20px; background-color: #fff;">
+      <?php if($_SESSION['sesilogin']['foto']!=""){?>
       <img src="<?php echo base_url('assets/photo-profile/').$_SESSION['sesilogin']['foto']?>" class="img-responsive">
-    <?php }else{ ?>
-    <img src="<?php echo base_url('assets/img/not-profile.png');?>" class="img img-responsive">
-    <?php } ?>
-    <br>
-    <form role="form" class="form-group" method="POST" action="<?php echo base_url('index.php/web/update_img_profile')?>" enctype="multipart/form-data">
-     <input type="file" name="filefoto" id="cleardemo" multiple>
-     <br>
-     <button type="submit" name="btnSubmite" class="btn btn-success btn-block">Update Photo</button>
-      
-    </form>
-    <script>
-
-$('#cleardemo').filestyle({
- 
-iconName : 'fa fa-file-image-o',
-
-buttonText : ' Choose image',
- 
-buttonName : 'btn-info'
- 
-});
- 
- 
- 
-$('#clear').click(function() {
- 
-$('#cleardemo').filestyle('clear');
- 
-});
- 
-</script>
-    
-  </div>
-
+      <?php }else{ ?>
+      <img src="<?php echo base_url('assets/img/not-profile.png');?>" class="img img-responsive">
+      <?php } ?>
+      <br>
+      <form role="form" class="form-group" method="POST" action="<?php echo base_url('index.php/web/update_img_profile')?>" enctype="multipart/form-data">
+        <input type="file" name="filefoto" id="cleardemo" multiple><br>
+        <button type="submit" name="btnSubmite" class="btn btn-success btn-block">Ubah foto</button> 
+      </form>
+    </div>
 	  <div class="col-md-8 " style="background-color: #fff;">
-                 <div style="margin-top: 30px">
-                  <span style="font-weight: bold; color: #0c7069; font-size:25px">Informasi Umum</span>
-                  <button type="submit" class="pull-right btn btn-success btn-sm" name="signup" value="Sign up">Ubah</button>
-                </div>
-            <hr>
-            <!-- /.box-header -->
-              <div class="panel-body">
-            <form class="form-horizontal">
-             
-                <div class="row">
-              
-                  <label class="col-sm-3 control-label">Username :</label>
-                  <div class="col-md-9">
-                      <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['username']?></p>
-                  </div>
-                 <label class="col-sm-3 control-label">Nama Lengkap :</label>
-                  <div class="col-md-9">
-                      <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['nama']?></p>
-                  </div>
-                  <label class="col-sm-3 control-label">E-mail :</label>
-                  <div class="col-md-9">
-                      <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['email']?></p>
-                  </div>
-              
-                   <label class="col-sm-3 control-label">Telpon :</label>
-                  <div class="col-md-9">
-                      <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['no_telpon']?></p>
-                  </div>
-                      <label class="col-sm-3 control-label">Alamat :</label>
-                  <div class="col-md-9">
-                      <p class="form-control" style="border-style: none;box-shadow: none">Jl.Cikoneng,komplek geria indah cikoneng no 3A<br> 
-Kec. Bojong Soang</p>
-                  </div>
+      <div style="margin-top: 30px">
+        <span style="font-weight: bold; color: #0c7069; font-size:25px">Informasi Umum</span>
+        <button type="submit" class="pull-right btn btn-success btn-sm" data-toggle='modal' data-target='#exampleModalCenter2'>Ubah</button>
+      </div><hr>
+      <div class="panel-body">
+        <form class="form-horizontal">     
+          <div class="row">    
+            <label class="col-sm-3 control-label">E-mail :</label>
+            <div class="col-md-9">
+              <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['email']?>
+              </p>
             </div>
-            </form>
-
-          
+            <label class="col-sm-3 control-label">Nama Lengkap :</label>
+            <div class="col-md-9">
+              <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['nama']?>
+              </p>
+            </div>
+            <label class="col-sm-3 control-label">Telepon :</label>
+            <div class="col-md-9">
+              <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['no_telpon']?>
+              </p>
+            </div>
+            <label class="col-sm-3 control-label">Alamat :</label>
+            <div class="col-md-9">
+              <p class="form-control" style="border-style: none;box-shadow: none"><?= $_SESSION['sesilogin']['alamat']?>
+              </p>
+            </div>
           </div>
-
-                 <div style="margin-top: 30px">
-                  <span style="font-weight: bold; color: #0c7069; font-size:25px">Password</span>
-                </div>
-            <hr>
-                <form>
-                 <div class="form-group col-md-4">
-                  <label >Password Lama</label>
-                  <input type="password" class="form-control" placeholder="Enter Password Lama">
-                </div>
-
-                <div class="form-group col-md-4">
-                  <label>Password Baru</label>
-                  <input type="password" class="form-control" placeholder="Enter Password Baru">
-                </div>
-                <div class="form-group col-md-4">
-                  <label>Konfirmasi Password</label>
-                  <input type="password" class="form-control" placeholder="Enter Confrim Password">
-                </div>
-                  <br>
-                  <div class="form-group col-md-12 ">
-                      <button class="btn btn-success pull-right">Ubah Password</button>
-                  </div>                
-                </form>
-            
-	</div>
- 
+        </form>        
+      </div>
+      <div style="margin-top: 30px">
+        <span style="font-weight: bold; color: #0c7069; font-size:25px">Password</span>
+      </div><hr>
+      <form id="updatepassword" method="POST" action="<?php echo base_url('index.php/web/ubah_password') ?>">
+        <div class="form-group col-md-4">
+          <label >Password Lama</label>
+          <input type="password" class="form-control" id="password_lama" name="password_lama" placeholder="Masukan Password Lama">
+        </div>
+        <div class="form-group col-md-4">
+          <label>Password Baru</label>
+          <input type="password" class="form-control" id="password_baru" name="password_baru" placeholder="Masukan Password Baru">
+        </div>
+        <div class="form-group col-md-4">
+          <label>Konfirmasi Password</label>
+          <input type="password" class="form-control" id="password_confrim" name="password_confrim" placeholder="Masukan Konfrim Password">
+        </div><br>
+        <div class="form-group col-md-12 ">
+          <button type="submit" class="btn btn-success pull-right">Ubah Password</button>
+        </div>                
+      </form>
+	   </div>
   </div>
 </div>
+
+
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xs" role="document">
+    <div class="modal-content">
+      <form id="myForm" action="<?php echo base_url('index.php/web/ubah_profile')?>" method="post">
+      <div class="modal-header">
+        <h4><b>Ubah Akun</b></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="modal-body">
+            <div class="box-body">
+              <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="hidden" name="txtId" value="4">
+                <input type="text" class="form-control" name="nama" value="<?php echo $_SESSION['sesilogin']['nama']?>" placeholder="Masukan Nama Lengkap">
+              </div>
+              <div class="form-group">
+                <label>Telpon</label>
+                <input type="text" class="form-control" name="telpon" value="<?php echo $_SESSION['sesilogin']['no_telpon']?>" placeholder="Masukan Nomor Telpon">
+              </div>
+              <div class="form-group">
+                <label>Alamat</label>
+                <textarea class="form-control" name="alamat"><?php echo $_SESSION['sesilogin']['alamat']?></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary">Ubah Profile</button>
+      </div>
+      </form>
+    </div>
+  </div>
 </div>
+
+<script>
+  $('#cleardemo').filestyle({
+    iconName : 'fa fa-file-image-o',
+    buttonText : ' Pilih foto',
+    buttonName : 'btn-info'
+  });
+  $('#clear').click(function() {
+  $('#cleardemo').filestyle('clear');
+  });
+</script>
 
 <script type="text/javascript">
-    $.validator.setDefaults( {
-      submitHandler: function () {
-        alert( "submitted!" );
-      }
-    } );
-
     $( document ).ready( function () {
-      $( "#signupForm2" ).validate( {
+      $( "#updatepassword" ).validate( {
         rules: {
-          firstname: "required",
-          lastname: "required",
-          phone: "required",
-          password: {
+          password_lama: "required",
+          password_baru: {
             required: true,
             minlength: 5
           },
-          confirm_password: {
+          password_confrim: {
             required: true,
             minlength: 5,
-            equalTo: "#password"
+            equalTo: "#password_baru"
           },
           email: {
             required: true,
@@ -136,23 +139,16 @@ Kec. Bojong Soang</p>
           },
         },
         messages: {
-          firstname: "Please enter your firstname",
-          lastname: "Please enter your lastname",
-          phone: "Please enter your phone Number",
-          username: {
-            required: "Please enter a username",
-            minlength: "Your username must consist of at least 2 characters"
+          password_lama: "Masukan password Anda",
+          password_baru: {
+            required: "Masukan Password",
+            minlength: "Masukan password lebih dari 5 karakter"
           },
-          password: {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long"
+          password_confrim: {
+            required: "Masukan Password",
+            minlength: "Masukan password lebih dari 5 karakter",
+            equalTo: "Masukan password Harus Sama dengan disamping"
           },
-          confirm_password: {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long",
-            equalTo: "Please enter the same password as above"
-          },
-          email: "Please enter a valid email address",
         },
         errorElement: "em",
         errorPlacement: function ( error, element ) {
@@ -175,5 +171,6 @@ Kec. Bojong Soang</p>
 
     } );
   </script>
+
 
   

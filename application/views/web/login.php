@@ -1,23 +1,22 @@
-
 <div class="container utama">
 	<div class="row">
     <div class="col-md-5 col-sm-offset-2 box">
       <div class="text-center">
-        <h3 style="font-weight: bold; color: #0c7069">Login</h3>
+        <h3 style="font-weight: bold; color: #0c7069">Masuk</h3>
       </div>
       <hr>
       <div class="panel-body">
-        <form method="post" action="<?php echo base_url('index.php/web/login')?>">
+        <form id="signupForm2" method="post" action="<?php echo base_url('index.php/web/login')?>">
           <div class="box-body">            
             <div class="form-group">
-              <input type="text" class="form-garis" id="username" name="username" placeholder="Enter Email Address">
+              <input type="email" class="form-garis" id="username" name="email" placeholder="Masukan Email Anda">
             </div>              
             <div class="form-group">
-              <input type="password" class="form-garis" id="password" name="password" placeholder="Enter Password">
+              <input type="password" class="form-garis" id="password" name="password" placeholder="Masukan Password Anda">
             </div>         
             <div class="form-group">
               <div class="">
-                <button type="submit" class="btn btn-success btn-block" >Sign In</button>
+                <button type="submit" class="btn btn-success btn-block" >Masuk</button>
               </div>
             </div>
           </div>
@@ -25,22 +24,15 @@
       </div>
     </div>
     <div class="col-md-3 box2">
-      
-      <h4>New Here?</h4>
-      <br>
-      <p>By creating an account in our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-       <a href="daftar.html" type="button" class="btn btn-default btn-sm center-block">create an account</a>
+      <h4>Pelanggan baru?</h4><br>
+      <p>Dengan membuat sebuah akun di toko kami, kamu akan lebih mudah dalam proses transaksi.</p>
+      <a href="daftar.html" type="button" class="btn btn-default btn-sm center-block">Buak sebuah Akun</a>
     </div>
   </div>
 </div>
 
 
 <script type="text/javascript">
-    $.validator.setDefaults( {
-      submitHandler: function () {
-        alert( "submitted!" );
-      }
-    } );
 
     $( document ).ready( function () {
       $( "#signupForm2" ).validate( {
@@ -55,8 +47,8 @@
           },
         },
         messages: {
-          email: "Please enter your email address",
-          password: "Please enter your Password",
+          email: "Masukan Email Anda",
+          password: "Masukan Password Anda",
         },
         errorElement: "em",
         errorPlacement: function ( error, element ) {
